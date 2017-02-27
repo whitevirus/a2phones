@@ -1,0 +1,11 @@
+<h3>Add List</h3>
+<form (submit)="addList()">
+  <input type="text" [(ngModel)]="text" name="test">
+</form>
+
+<h3>To Do List</h3>
+<ul>
+  <li *ngFor="let list of lists">
+    {{list.text}} <button (click)="deleteList(list.text)">x</button>
+  </li>
+</ul>
